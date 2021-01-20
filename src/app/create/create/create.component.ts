@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -11,6 +11,10 @@ export class CreateComponent implements OnInit {
     name: ['', [Validators.required, Validators.maxLength(40)]],
     gender: ['', [Validators.required, Validators.pattern(/male|female/)]],
   });
+get nameControl(){
+  return this.form.get('name') as FormControl;
+}
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
