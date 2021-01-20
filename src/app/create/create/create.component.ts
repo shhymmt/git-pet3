@@ -11,6 +11,8 @@ export class CreateComponent implements OnInit {
     name: ['', [Validators.required, Validators.maxLength(40)]],
     gender: ['', [Validators.required, Validators.pattern(/male|female/)]],
   });
+
+  // : FormControlと書けば怒られないが、エラーの解消法として合っているか
 get nameControl(){
   return this.form.get('name') as FormControl;
 }
