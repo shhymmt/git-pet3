@@ -13,14 +13,26 @@ export class CreateComponent implements OnInit {
   });
 
   // : FormControlと書けば怒られないが、エラーの解消法として合っているか
-get nameControl(){
-  return this.form.get('name') as FormControl;
-}
+  get nameControl(): FormControl {
+    return this.form.get('name') as FormControl;
+  }
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
   submit(): void {
     console.log(this.form.value);
+  }
+
+  // ミーティングで行った課題0120
+  private getWord(): string {
+    return 'こんにちは';
+  }
+
+  sayHello(): void {
+    alert(this.getWord());
+  }
+  private getColor(colorName: string): string {
+    return colorName;
   }
 }
