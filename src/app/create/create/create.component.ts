@@ -19,7 +19,10 @@ export class CreateComponent implements OnInit {
     slidesPerView: 3,
   };
 
-  petIds = [...Array(10)].map((_, i) => i + 1);
+  // petIds = [...Array(10)].map((_, i) => i + 1);
+  petIds = new Array(10).fill(null).map((_, i) => i + 1); // なにもないやつ10こ→fill(null)
+
+
 
   selectedPetId = 0;
 
@@ -35,7 +38,9 @@ export class CreateComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.petIds);
+  }
   submit(): void {
     console.log(this.form.value);
     console.log(this.selectedPetId);
