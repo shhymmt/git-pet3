@@ -3,8 +3,8 @@
     <img [src]="pet.avatarUrl" alt="">
   </figure>
   <div class="pet__body">
-    <p class="pet__name">{{pet.name}}</p>
-    <mat-progress-bar mode="determinate" [value]="getExpPercentage()"></mat-progress-bar>
+    <p class="pet__name">{{pet.name}}<small>Lv {{pet.level}}</small></p>
+    <mat-progress-bar class="pet_exp-bar" mode="determinate" [value]="getExpPercentage()"></mat-progress-bar>
     <p class="pet__exp">{{pet.exp}} / {{maxExp}}</p>
 
   </div>

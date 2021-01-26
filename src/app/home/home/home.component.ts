@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   pet: Pet = {
     name: 'テストペット',
-    exp: 200,
+    exp: 300,
     level: 4,
     avatarUrl: '/assets/images/pet-1.png'
   };
