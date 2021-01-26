@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "gitpet3"
+  },
+  "targets": {
+    "gitpet3": {
+      "hosting": {
+        "gitpet3": [
+          "gitpet3"
+        ]
+      }
+    }
   }
 }

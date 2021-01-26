@@ -7,11 +7,11 @@ export class AuthService {
 
   constructor() { }
 
-  login() {
+  login(): void {
 
   }
 
-  logout() {
+  logout(): void {
 
   }
 }

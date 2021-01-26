@@ -122,6 +122,10 @@
               "devServerTarget": "gitpet3:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
